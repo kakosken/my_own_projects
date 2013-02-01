@@ -41,7 +41,7 @@ $dbhost = 'ip_address:3306'; /* host */ $dbuser = 'username'; /* your username c
 
 $conn = mysql_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
 
-$dbname = 'database_name';
+$dbname = 'shipshop';
 mysql_select_db($dbname);//your database.
 /*
 	Delete items

@@ -12,7 +12,7 @@ function initial_db_connection()
 	
 	$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
 	
-	$dbname = 'database_name';
+	$dbname = 'shipshop';
 	mysql_select_db($dbname);//your database.
 }
 initial_db_connection();
