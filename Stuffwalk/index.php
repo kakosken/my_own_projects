@@ -13,7 +13,7 @@ mysql_select_db($dbname);//your database.
 $browser = $_SERVER['HTTP_USER_AGENT'];
 $ip=$_SERVER['REMOTE_ADDR'];
 $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-if($ip != "130.234.191.97")
+if($ip != "ip_address")
 {
 mysql_query("INSERT INTO tracking values(NOW(), '$ip','$hostname','$browser')");
 }
@@ -87,7 +87,7 @@ function registeration(firstname)
 /* database communication */
 
 /**
-	First we want all FUCKING NEEDED DATA from 'shipshop' database, so we complete it before start HTML-language
+	First we want all needed data from 'shipshop' database, so we complete it before start HTML-language
 	THIS PHP DATA NEEDS space from line 30 to line 112, after it HTML-language will start on line 113.
 **/
 
