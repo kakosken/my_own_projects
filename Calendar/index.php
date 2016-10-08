@@ -27,9 +27,9 @@
  * @dbname	Name of Database
  * @query	Return parameter for main activity
  */
-	$dbhost = '130.234.191.71:3306';	/* host */ 
-	$dbuser = 'q#¤%_GD4jjt34w_S';		/* your username created */ 
-	$dbpass = 'cytBdSpWr3deJpfX';		//'password'; //the password 4 that user
+	$dbhost = '';	/* host */ 
+	$dbuser = '';		/* your username created */ 
+	$dbpass = '';		//'password'; //the password 4 that user
 	$dbname = 'calendar';				/* database name */
 	
 	$conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');

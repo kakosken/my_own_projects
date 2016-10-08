@@ -13,10 +13,6 @@
  * @filesource	Unavailable
  */
 
-
-$(document).ready(function () {
-				    console.log("Hello World");
-				});
 // --------------------------------------------------------------------------------------------------------------------
 
 	/**
@@ -63,12 +59,12 @@ $(document).ready(function () {
 			
 		var json_variables = JSON.stringify(variables);
 		
-		json_variables = json_variables.replace(/ä/g,"[ae]")
-										.replace(/Ä/g,"[Ae]")
-										.replace(/ö/g,"[oe]")
-										.replace(/Ö/g,"[Oe]")
-										.replace(/å/g,"[ar]")
-										.replace(/Å/g,"[Ar]");
+		json_variables = json_variables.replace(/ï¿½/g,"[ae]")
+										.replace(/ï¿½/g,"[Ae]")
+										.replace(/ï¿½/g,"[oe]")
+										.replace(/ï¿½/g,"[Oe]")
+										.replace(/ï¿½/g,"[ar]")
+										.replace(/ï¿½/g,"[Ar]");
 		get_information(json_variables);
 		}
 	}
@@ -193,7 +189,7 @@ $(document).ready(function () {
 				}
 				
 				
-				// tää lisätty, niin kalenteri päivittyy automatic
+				// tï¿½ï¿½ lisï¿½tty, niin kalenteri pï¿½ivittyy automatic
 				bootloader('boot_type__launch_week_notifier_only');
 			}
 			
@@ -210,31 +206,31 @@ $(document).ready(function () {
 			{
 				aa ="";
 				if(information["result"]!=0)	{
-					aa+="<p>Ilmoittautumisajat tälle viikolle ";
+					aa+="<p>Ilmoittautumisajat tï¿½lle viikolle ";
 					for(a in information["result"])
 						aa+="<div>"+information["result"][a]["code"]+" "+information["result"][a]["name"]+"</div>";
 					aa+="</p>";
 				}	else	{
-					aa+="<p>Ilmoittautumisajat tälle viikolle: ";
-					aa+="<b>Aiheuta säpinää ja sutinaa kavereillesi luomalla <input id=\"create_event_shortcut\" " +
-							"placeholder=\"lisää häppeninkiä!\" /></b>";
+					aa+="<p>Ilmoittautumisajat tï¿½lle viikolle: ";
+					aa+="<b>Aiheuta sï¿½pinï¿½ï¿½ ja sutinaa kavereillesi luomalla <input id=\"create_event_shortcut\" " +
+							"placeholder=\"lisï¿½ï¿½ hï¿½ppeninkiï¿½!\" /></b>";
 					aa+="</p>";
 				}
 	
 				aa+= "<br/>Nyt on vuoden "+information["datetime_specs"]["now_year"]+" " +
 						"viikko "+information["datetime_specs"]["now_week"]+", ";
 				aa+= "saatavilla tietoja viikoille "+information["datetime_specs"]["available"]+". " +
-						"Näytetään viikko "+information["datetime_specs"]["selected"]+".";
+						"Nï¿½ytetï¿½ï¿½n viikko "+information["datetime_specs"]["selected"]+".";
 				aa+= "daa"+information["datetime_specs"]["fdow"];
 				
 				aa+= "Viikoille muutoksia: ...";//+" "+information["query_size"];
-				aa+= "<br/>Näytetylle viikolle "+Object.keys(information["timetable_list"]).length+" pv:lle tapahtumaa";
+				aa+= "<br/>Nï¿½ytetylle viikolle "+Object.keys(information["timetable_list"]).length+" pv:lle tapahtumaa";
 				aa+= "<br/>Earliest time: "+information["timetable_limits"]["week_e"]+", ";
 				aa+= "latest: "+information["timetable_limits"]["week_l"]+", ";
 				aa+= "aikaero: "+information["timetable_limits"]["week_d"]+" tuntia. ";
 				aa+= "kahden tunnin jaksoja: <span id=\"week_2hours_dimensions\">" +
 						""+information["timetable_limits"]["week_2hours_dimensions"]+"</span> kappaletta";
-				aa+= "<br/>Päällekkäisyydet/Huomioitavaa: (laita tää tohon alemman Week-rivin oikeaan laitaan)";
+				aa+= "<br/>Pï¿½ï¿½llekkï¿½isyydet/Huomioitavaa: (laita tï¿½ï¿½ tohon alemman Week-rivin oikeaan laitaan)";
 				aa+= "<br/>&nbsp;";
 				aa+= "</div>";
 				document.getElementById(information["result_screen"]).innerHTML=aa;
@@ -257,13 +253,13 @@ $(document).ready(function () {
 					
 					x="";
 					xz = document.createElement("div");
-					// kalenteripäivän pvm + "x tapahtumaa" -kohdan korkeus
+					// kalenteripï¿½ivï¿½n pvm + "x tapahtumaa" -kohdan korkeus
 					xz.style.height="35";
 					
 					//x+="<div>";
 					x+="<a href=\"javascript:;\" id=\"calendar_detail::add_new_thing::"+w[d]+"\" " +
 							"name=\"calendar_detail::add_new_thing::"+w[d]+"::"+information["week_days_list"][d]["date"]+"\" " +
-									"onclick=\"quick_handler(this);\" title=\"Lisää tapahtuma...\">";
+									"onclick=\"quick_handler(this);\" title=\"Lisï¿½ï¿½ tapahtuma...\">";
 					x+=w[d]+" ("+information["week_days_list"][d]["date"]+")</a></div>";
 					x+="<div style=\"border-bottom:1px solid;font-weight:bold;background-color:lightblue;\">";
 					x+="<center>";
@@ -288,7 +284,7 @@ $(document).ready(function () {
 					x2=(x1*75)+42;
 					day_agenda.style.height=x2;
 					
-					// tähän päättyy päivän pituuden määritys
+					// tï¿½hï¿½n pï¿½ï¿½ttyy pï¿½ivï¿½n pituuden mï¿½ï¿½ritys
 					
 					day_agenda.appendChild(xz);
 					
@@ -311,7 +307,7 @@ $(document).ready(function () {
 											"href=\"javascript:;\" onclick=\"handler(this);\">Up</a> / ";
 									xy+= "<a name=\"event_modify:"+daily_datetime[dim][k]["name"]+":change_duration:down\" " +
 											"href=\"javascript:;\" onclick=\"handler(this);\">Down</a>";
-									xy+= "<br/>^ ei vielä toimi!";
+									xy+= "<br/>^ ei vielï¿½ toimi!";
 									
 									day_moment = document.createElement("div");
 									day_moment.id="event_"+datetime+" "+dim;
@@ -378,7 +374,7 @@ $(document).ready(function () {
 			{
 				if(information["result"]!=0){
 					
-					aa="<p>Ilmoittautumisajat tälle viikolle ";
+					aa="<p>Ilmoittautumisajat tï¿½lle viikolle ";
 					for(a in information["result"])
 					{
 						aa+="<div>"+information["result"][a]["code"]+" "+information["result"][a]["name"]+"</div>";
@@ -386,9 +382,9 @@ $(document).ready(function () {
 					
 					aa+="</p>";
 				}else{
-					aa="<p>Ilmoittautumisajat tälle viikolle ";
-					aa+="<b>Aiheuta säpinää ja sutinaa kavereillesi luomalla <input id=\"create_event_shortcut\" " +
-							"placeholder=\"lisää häppeninkiä!\" /></b>";
+					aa="<p>Ilmoittautumisajat tï¿½lle viikolle ";
+					aa+="<b>Aiheuta sï¿½pinï¿½ï¿½ ja sutinaa kavereillesi luomalla <input id=\"create_event_shortcut\" " +
+							"placeholder=\"lisï¿½ï¿½ hï¿½ppeninkiï¿½!\" /></b>";
 					aa+="</p>";
 					
 				}
@@ -465,12 +461,12 @@ $(document).ready(function () {
 				
 			var json_variables = JSON.stringify(variables);
 			
-			json_variables = json_variables.replace(/ä/g,"[ae]")
-											.replace(/Ä/g,"[Ae]")
-											.replace(/ö/g,"[oe]")
-											.replace(/Ö/g,"[Oe]")
-											.replace(/å/g,"[ar]")
-											.replace(/Å/g,"[Ar]");
+			json_variables = json_variables.replace(/ï¿½/g,"[ae]")
+											.replace(/ï¿½/g,"[Ae]")
+											.replace(/ï¿½/g,"[oe]")
+											.replace(/ï¿½/g,"[Oe]")
+											.replace(/ï¿½/g,"[ar]")
+											.replace(/ï¿½/g,"[Ar]");
 			get_information(json_variables);
 			}
 		}
@@ -540,7 +536,7 @@ $(document).ready(function () {
 				a.style.padding="0 2";
 				document.getElementById("calendar_duration").appendChild(a);
 				document.getElementById(el.id).style.backgroundColor="skyblue";
-				document.getElementById("calendar_notification").innerHTML="Valittuna "+x.children.length+" elementtiä.";
+				document.getElementById("calendar_notification").innerHTML="Valittuna "+x.children.length+" elementtiï¿½.";
 			}
 			else
 				document.getElementById("calendar_notification").innerHTML="Kerrallaan voi olla valittuna 2 pvm.";
@@ -560,7 +556,7 @@ $(document).ready(function () {
 				a.style.padding="0 2";
 				document.getElementById("calendar_duration").appendChild(a);
 				document.getElementById(el.id).style.backgroundColor="skyblue";
-				document.getElementById("calendar_notification").innerHTML="Valittuna "+x.children.length+" elementtiä.";
+				document.getElementById("calendar_notification").innerHTML="Valittuna "+x.children.length+" elementtiï¿½.";
 			}
 			else
 				document.getElementById("calendar_notification").innerHTML="Kerrallaan voi olla valittuna 2 pvm.";
@@ -572,7 +568,7 @@ $(document).ready(function () {
 			a.parentNode.removeChild(a);
 			x=document.getElementById("calendar_duration");
 			if(x.children.length>2)
-				document.getElementById("calendar_notification").innerHTML="Valittuna "+x.children.length+" elementtiä.";
+				document.getElementById("calendar_notification").innerHTML="Valittuna "+x.children.length+" elementtiï¿½.";
 			if(x.children.length<2)
 				document.getElementById("calendar_notification").innerHTML="Valittuna "+x.children.length+" elementti.";
 			if(x.children.length==0)
@@ -585,7 +581,7 @@ $(document).ready(function () {
 			a.parentNode.removeChild(a);
 			x=document.getElementById("calendar_duration");
 			if(x.children.length>2)
-				document.getElementById("calendar_notification").innerHTML="Valittuna "+x.children.length+" elementtiä.";
+				document.getElementById("calendar_notification").innerHTML="Valittuna "+x.children.length+" elementtiï¿½.";
 			if(x.children.length<2)
 				document.getElementById("calendar_notification").innerHTML="Valittuna "+x.children.length+" elementti.";
 			if(x.children.length==0)
@@ -593,7 +589,7 @@ $(document).ready(function () {
 		}
 		else if(el.name.split(":")[0]=="calendar_detail" && el.name.split(":")[2]=="add_new_thing")
 		{
-			o  = "<h4 style=\"margin:2;\">Lisää häppeninkiä.";
+			o  = "<h4 style=\"margin:2;\">Lisï¿½ï¿½ hï¿½ppeninkiï¿½.";
 			o += "<input id=\"course_mgmt::add_course\" type=\"button\" value=\"Done\" onclick=\"handler(this);\" " +
 					"style=\"float:right;\"/>";
 			o += "</h4>";
@@ -608,21 +604,21 @@ $(document).ready(function () {
 					o += "<input id=\"course_mgmt::course_material\" placeholder=\"Course Material\" />";
 					o += "<h4 style=\"margin-bottom:0;border-bottom:1px solid;\">Reserve a space</h4>";
 					o += "<input id=\"course_mgmt::course_max_count_of_participants\" placeholder=\"Max count of participants\" />";
-					o += "<br/>Montako osallistujaa kurssilla on yleensä ollut &amp; minkäkokoisia tiloja on olemassa -> voi automaattisesti";
+					o += "<br/>Montako osallistujaa kurssilla on yleensï¿½ ollut &amp; minkï¿½kokoisia tiloja on olemassa -> voi automaattisesti";
 					o += "valita/ehdottaa sopivat tilat.<br/>";
-					o += "<a href=\"\">Enintään tai hieman yli 20</a> <a href=\"\">Enintään tai hieman yli 50</a>";
-					o += "<a href=\"\">Enintään tai hieman yli 100</a> <a href=\"\">Enintään tai hieman yli 200</a>";
+					o += "<a href=\"\">Enintï¿½ï¿½n tai hieman yli 20</a> <a href=\"\">Enintï¿½ï¿½n tai hieman yli 50</a>";
+					o += "<a href=\"\">Enintï¿½ï¿½n tai hieman yli 100</a> <a href=\"\">Enintï¿½ï¿½n tai hieman yli 200</a>";
 					o += "<h4 style=\"margin-bottom:0;border-bottom:1px solid;\">Tarvittava aika</h4>";
-					o += "Tämän avulal voidaan tilakalenterista valita tilanteeseen sopivin vaihtoehto.<br/>";
+					o += "Tï¿½mï¿½n avulal voidaan tilakalenterista valita tilanteeseen sopivin vaihtoehto.<br/>";
 					o += "<a href=\"javascript:;\">2h</a> <a href=\"javascript:;\">4h</a>";
 					o += " <a href=\"javascript:;\">6h</a> <a href=\"javascript:;\">8h</a>";
-					o += "<h4 style=\"margin-bottom:0;border-bottom:1px solid;\">Näkyvyys</h4>";
-					o += "Mainos näkyy kaikille vain klo 8-10 / Mainos näkyy mainostajille / näkyy muulloinkin kuin pyöritysaikana";
+					o += "<h4 style=\"margin-bottom:0;border-bottom:1px solid;\">Nï¿½kyvyys</h4>";
+					o += "Mainos nï¿½kyy kaikille vain klo 8-10 / Mainos nï¿½kyy mainostajille / nï¿½kyy muulloinkin kuin pyï¿½ritysaikana";
 					
 					o += "<h4 style=\"margin-bottom:0;border-bottom:1px solid;\">Calendar Spectrum</h4>"; // ...and physics is boring?
 					o += "<label><input type=\"radio\" />Ilmoittautumisaika</label><br/>"; 
-					o += "<label><input type=\"radio\" />Käynnissäolon aika</label><br/>"; // tapahtuman kesto/aikataulu
-					o += "<label><input type=\"radio\" />Tehtävän voimassaoloaika</label><br/>";
+					o += "<label><input type=\"radio\" />Kï¿½ynnissï¿½olon aika</label><br/>"; // tapahtuman kesto/aikataulu
+					o += "<label><input type=\"radio\" />Tehtï¿½vï¿½n voimassaoloaika</label><br/>";
 			}
 			o += "<p>Selected Dates: <span id=\"calendar_duration\"></span><br/>";
 			o += "<span id=\"calendar_notification\"></span></p>";
@@ -643,7 +639,7 @@ $(document).ready(function () {
 				if(el.name.split("::")[3])
 				{
 					daytime = "2016-"+el.name.split("::")[3].split(".")[1]+"-"+el.name.split("::")[3].split(".")[0];
-					o+= "<br/>Mistä - Mihin:<br/>";
+					o+= "<br/>Mistï¿½ - Mihin:<br/>";
 					o+= "<div style=\"overflow:auto;\">";
 					o+= "<div style=\"float:left;margin: 5px;\">";
 						for(kello=0;kello<24;kello++)
@@ -679,8 +675,8 @@ $(document).ready(function () {
 		else if(el.name.split(":")[0]=="calendar_detail" && el.name.split(":")[2]=="now")
 		{
 			o  = "<p>Saatavilla on X tapahtumaa.</p>";
-			o += "<p>Aiheuta säpinää ja sutinaa kavereillesi luomalla  <input id=\"event_shortcut\" " +
-					"placeholder=\"lisää häppeninkiä!\" /></p>";
+			o += "<p>Aiheuta sï¿½pinï¿½ï¿½ ja sutinaa kavereillesi luomalla  <input id=\"event_shortcut\" " +
+					"placeholder=\"lisï¿½ï¿½ hï¿½ppeninkiï¿½!\" /></p>";
 			document.getElementById("sidebar_list").innerHTML=o;
 		}
 		
