@@ -232,10 +232,7 @@ $id = $_GET['id'];
 
 /* database communication */
 
-/**
-	First we want all FUCKING NEEDED DATA from 'shipshop' database, so we complete it before start HTML-language
-	THIS PHP DATA NEEDS space from line 30 to line 112, after it HTML-language will start on line 113.
-**/
+
 
 // Connect to database
 
