@@ -59,12 +59,12 @@
 			
 		var json_variables = JSON.stringify(variables);
 		
-		json_variables = json_variables.replace(/�/g,"[ae]")
-										.replace(/�/g,"[Ae]")
-										.replace(/�/g,"[oe]")
-										.replace(/�/g,"[Oe]")
-										.replace(/�/g,"[ar]")
-										.replace(/�/g,"[Ar]");
+		json_variables = json_variables.replace(/ä/g,"[ae]")
+										.replace(/Ä/g,"[Ae]")
+										.replace(/ö/g,"[oe]")
+										.replace(/Ö/g,"[Oe]")
+										.replace(/å/g,"[ar]")
+										.replace(/Å/g,"[Ar]");
 		get_information(json_variables);
 		}
 	}
