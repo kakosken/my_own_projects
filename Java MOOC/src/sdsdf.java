@@ -8,7 +8,7 @@
  *
  * @author kompuutteri
  */
-public class sdsdf {
+public class sdsd {
     
     public void main(){
        System.out.println("Jotain järkevää vaikka seuraavaksi ;)");
