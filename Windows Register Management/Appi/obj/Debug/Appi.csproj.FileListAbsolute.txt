@@ -1,0 +1,9 @@
+p:\visual studio 2012\Projects\Appi\Appi\bin\Debug\Appi.exe.config
+p:\visual studio 2012\Projects\Appi\Appi\bin\Debug\Appi.exe
+p:\visual studio 2012\Projects\Appi\Appi\bin\Debug\Appi.pdb
+p:\visual studio 2012\Projects\Appi\Appi\obj\Debug\Appi.Form1.resources
+p:\visual studio 2012\Projects\Appi\Appi\obj\Debug\Appi.Properties.Resources.resources
+p:\visual studio 2012\Projects\Appi\Appi\obj\Debug\Appi.csproj.GenerateResource.Cache
+p:\visual studio 2012\Projects\Appi\Appi\obj\Debug\Appi.exe
+p:\visual studio 2012\Projects\Appi\Appi\obj\Debug\Appi.pdb
+p:\visual studio 2012\Projects\Appi\Appi\obj\Debug\Appi.csprojResolveAssemblyReference.cache
